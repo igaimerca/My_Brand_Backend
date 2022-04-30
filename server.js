@@ -10,10 +10,11 @@ import swaggerUi from "swagger-ui-express";
 import routes from "./routes.js";
 import swaggerJSDoc from "swagger-jsdoc";
 
+const app = express();
+
 mongoose
   .connect("mongodb://localhost:27017/portfolio", { useNewUrlParser: true })
   .then(() => {
-    const app = express();
     app.use(
       fileUpload({
         createParentPath: true,
@@ -55,3 +56,5 @@ mongoose
       console.log("Server has started!");
     });
   });
+
+export default app;

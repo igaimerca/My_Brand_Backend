@@ -61,7 +61,7 @@ import { login, signup } from "./controllers/users.controllers.js";
 router.get("/message", adminAuth, messages);
 router.get("/message/:id", adminAuth, message);
 router.post("/message/reply", adminAuth, reply);
-router.post("/message/add", adminAuth, createMessage);
+router.post("/message/add", createMessage);
 router.delete("/message/:id", adminAuth, deleteMessage);
 
 //messages documentation

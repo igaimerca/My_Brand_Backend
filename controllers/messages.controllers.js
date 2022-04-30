@@ -20,7 +20,7 @@ export const createMessage = async (req, res) => {
         sender: data.names,
         email: data.email,
         message: data.message,
-        createAt: Date.now(),
+        createdAt: Date.now(),
       });
 
       await message.save().then(() => {
